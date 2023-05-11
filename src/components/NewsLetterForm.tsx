@@ -8,7 +8,10 @@ import { CheckIcon } from "@radix-ui/react-icons";
 
 export function NewsLetterForm() {
   return (
-    <Form.Root className="md:min-w-[26.75rem] max-w-sm flex flex-col gap-6 bg-gray-700 xs:p-4 md:p-8 rounded-md">
+    <Form.Root
+      className="xs:p-4 md:p-8 md:min-w-[26.75rem]
+        rounded-md max-w-sm flex flex-col gap-6 bg-gray-700"
+    >
       <strong className="text-xl leading-8">Inscreva-se gratuitamente</strong>
       <div className="flex flex-col gap-2">
         <Form.Field className="flex flex-col gap-2 w-full" name="email ">
