@@ -10,7 +10,7 @@ export function NewsLetterForm() {
   return (
     <Form.Root
       className="xs:p-4 md:p-8 md:min-w-[26.75rem]
-        rounded-md max-w-sm flex flex-col gap-6 bg-gray-700"
+        rounded-md max-w-sm flex flex-col gap-6 bg-gray-700 h-full"
     >
       <strong className="text-xl leading-8">Inscreva-se gratuitamente</strong>
       <div className="flex flex-col gap-2">
@@ -113,7 +113,7 @@ export function NewsLetterForm() {
           className="h-4 w-4 data-[state=checked]:bg-purple-300 bg-white rounded"
           id="c1"
         >
-          <Checkbox.Indicator className="text-white">
+          <Checkbox.Indicator className="text-white flex">
             <CheckIcon />
           </Checkbox.Indicator>
         </Checkbox.Root>
