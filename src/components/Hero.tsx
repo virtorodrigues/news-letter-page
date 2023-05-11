@@ -14,7 +14,7 @@ export function Hero() {
           xl:text-[2.5rem] xl:leading-[3.25rem]
           font-bold"
       >
-        Receba conteúdos inéditos e novidades do Rocketzeiro
+        Receba conteúdos inéditos e novidades do Reactzeiro
       </h1>
 
       <div className="xs:flex-col-reverse xl:flex-row flex gap-6 xl:items-center">
