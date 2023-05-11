@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <div className="flex flex-col gap-6 max-w-screen-sm">
+    <div className="flex flex-col gap-6 xs:max-w-screen-sm md:max-w-[41.25rem]">
       <div className="flex items-center gap-4">
         <Image src="/news-letter.svg" alt="" width={48} height={48} priority />
         <span className="text-purple-300 text-xl">NEWSLETTER</span>
