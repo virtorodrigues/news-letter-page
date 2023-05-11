@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex justify-center pt-24 p-12">
+    <div className="flex justify-center gap-24 pt-24 p-12">
       <Hero />
       <NewsLetterForm />
     </div>

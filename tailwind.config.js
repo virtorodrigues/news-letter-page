@@ -28,8 +28,7 @@ module.exports = {
       'white': '#FFF',
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      sans: ['Roboto', 'sans-serif'],
     },
     extend: {
       spacing: {
