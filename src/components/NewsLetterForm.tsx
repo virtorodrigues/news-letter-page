@@ -8,14 +8,14 @@ import { CheckIcon } from "@radix-ui/react-icons";
 
 export function NewsLetterForm() {
   return (
-    <Form.Root className="min-w-max max-w-sm flex flex-col gap-6 bg-gray-700 p-8 rounded-md">
+    <Form.Root className="md:min-w-[26.75rem] max-w-sm flex flex-col gap-6 bg-gray-700 xs:p-4 md:p-8 rounded-md">
       <strong className="text-xl leading-8">Inscreva-se gratuitamente</strong>
       <div className="flex flex-col gap-2">
         <Form.Field className="flex flex-col gap-2 w-full" name="email ">
           <div className="flex flex-row items-center gap-3 rounded-md px-4 w-full bg-gray-500 text-white">
             <Image
               src="/user-icon.svg"
-              alt="Vercel Logo"
+              alt=""
               width={22}
               height={25}
               priority
@@ -47,7 +47,7 @@ export function NewsLetterForm() {
           <div className="flex flex-row items-center gap-3 rounded-md px-4 w-full bg-gray-500 text-white">
             <Image
               src="/message-icon.svg"
-              alt="Vercel Logo"
+              alt=""
               width={22}
               height={25}
               priority
@@ -76,17 +76,15 @@ export function NewsLetterForm() {
         </Form.Field>
       </div>
 
-      {/* linear-gradient(180deg,#202024,rgba(32,32,36,.2)),#121214 */}
-
       <div className="flex flex-col gap-2">
         <span className="text-gray-100">Qual o seu nível em programação?</span>
         <RadioGroup.Root
-          className="flex flex-row flex-1 gap-2"
+          className="flex xs:flex-col md:flex-row flex-1 gap-2"
           defaultValue="default"
           aria-label="View density"
         >
           <RadioGroup.Item
-            className="data-[state=checked]:border-purple-500 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer w-20 border border-gray-500"
+            className="data-[state=checked]:border-purple-500 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
             value="default"
             id="r1"
           >
@@ -96,7 +94,7 @@ export function NewsLetterForm() {
           </RadioGroup.Item>
 
           <RadioGroup.Item
-            className="data-[state=checked]:border-purple-500 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer w-20 border border-gray-500"
+            className="data-[state=checked]:border-purple-500 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
             value="confortable"
             id="r2"
           >
@@ -131,7 +129,7 @@ export function NewsLetterForm() {
       <div className="flex gap-3 border-t border-gray-500 pt-6 items-center">
         <Image
           src="/rocketseat-icon.svg"
-          alt="Vercel Logo"
+          alt=""
           width={33}
           height={33}
           priority
