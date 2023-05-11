@@ -16,9 +16,8 @@ module.exports = {
     colors: {
       'red-500': '#dd444c',
 
-      'purple-600': '#633BBC',
-      'purple-500': '#8257e5',
-      'purple-300': '#8F67F1',
+      'pink-500': '#c22665',
+      'pink-300': '#E44063',
       
       'gray-900': '#121214',
       'gray-700': '#1F1F23',

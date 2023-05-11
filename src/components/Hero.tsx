@@ -5,7 +5,7 @@ export function Hero() {
     <div className="flex flex-col gap-6 xs:max-w-screen-sm md:max-w-[41.25rem]">
       <div className="flex items-center gap-4">
         <Image src="/news-letter.svg" alt="" width={48} height={48} priority />
-        <span className="text-purple-300 text-xl">NEWSLETTER</span>
+        <span className="text-pink-300 text-xl">NEWSLETTER</span>
       </div>
 
       <h1
@@ -14,18 +14,12 @@ export function Hero() {
           xl:text-[2.5rem] xl:leading-[3.25rem]
           font-bold"
       >
-        Receba conteúdos inéditos e novidades da Rocketseat
+        Receba conteúdos inéditos e novidades do Rocketzeiro
       </h1>
 
-      <div className="xs:flex-col-reverse xl:flex-row flex gap-3">
-        <div className="flex flex-row justify-between">
-          <Image
-            src="/participants.svg"
-            alt=""
-            width={120}
-            height={67}
-            priority
-          />
+      <div className="xs:flex-col-reverse xl:flex-row flex gap-6 xl:items-center">
+        <div className="flex flex-row justify-between ">
+          <Image src="/react-logo.png" alt="" width={60} height={60} priority />
           <Image
             className="md:rotate-[-90deg] xl:hidden"
             src="/arrow-icon.svg"

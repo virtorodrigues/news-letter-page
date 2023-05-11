@@ -87,8 +87,8 @@ export function NewsLetterForm() {
           aria-label="View density"
         >
           <RadioGroup.Item
-            className="data-[state=checked]:border-purple-500 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
-            value="default"
+            className="data-[state=checked]:border-pink-300 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
+            value="level-beginner"
             id="r1"
           >
             <span className="p-4 text-sm text-left w-full h-full">
@@ -97,12 +97,12 @@ export function NewsLetterForm() {
           </RadioGroup.Item>
 
           <RadioGroup.Item
-            className="data-[state=checked]:border-purple-500 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
-            value="confortable"
+            className="data-[state=checked]:border-pink-300 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
+            value="level-pro"
             id="r2"
           >
             <span className="p-4 text-sm text-left">
-              🥷🏼 Já sou dev e tenho conhecimento
+              🤓 Já sou dev e tenho conhecimento
             </span>
           </RadioGroup.Item>
         </RadioGroup.Root>
@@ -110,7 +110,7 @@ export function NewsLetterForm() {
 
       <div className="flex items-center gap-2 ">
         <Checkbox.Root
-          className="h-4 w-4 data-[state=checked]:bg-purple-300 bg-white rounded"
+          className="h-4 w-4 data-[state=checked]:bg-pink-300 bg-white rounded"
           id="c1"
         >
           <Checkbox.Indicator className="text-white flex">
@@ -125,13 +125,14 @@ export function NewsLetterForm() {
       </div>
 
       <Form.Submit asChild>
-        <button className="bg-purple-500 hover:bg-purple-600 duration-500 p-[0.875rem] rounded-md font-bold">
+        <button className="bg-pink-300 hover:bg-pink-500 duration-500 p-[0.875rem] rounded-md font-bold">
           QUERO RECEBER
         </button>
       </Form.Submit>
       <div className="flex gap-3 border-t border-gray-500 pt-6 items-center">
         <Image
-          src="/rocketseat-icon.svg"
+          src="/react-icon.svg"
+          className="opacity-60"
           alt=""
           width={33}
           height={33}
