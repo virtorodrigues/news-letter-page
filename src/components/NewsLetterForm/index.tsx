@@ -27,7 +27,7 @@ export function NewsLetterForm() {
     defaultValues: {
       name: "",
       email: "",
-      level: undefined,
+      level: "unchecked",
       useTerms: undefined,
     },
   });
@@ -126,7 +126,6 @@ export function NewsLetterForm() {
           render={({ field }) => (
             <RadioGroup.Root
               id="level"
-              name="level"
               value={field.value}
               onValueChange={field.onChange}
               aria-label="View density"
@@ -138,7 +137,7 @@ export function NewsLetterForm() {
                 className="data-[state=checked]:border-pink-300 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
               >
                 <span className="p-4 text-sm text-left w-full h-full">
-                  😎 Estou começando em programação
+                  😎&nbsp;Estou começando em programação
                 </span>
               </RadioGroup.Item>
               <RadioGroup.Item
@@ -147,7 +146,7 @@ export function NewsLetterForm() {
                 className="data-[state=checked]:border-pink-300 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
               >
                 <span className="p-4 text-sm text-left w-full h-full">
-                  🤓 Já sou dev e tenho conhecimento
+                  🤓&nbsp;Já sou dev e tenho conhecimento
                 </span>
               </RadioGroup.Item>
             </RadioGroup.Root>
