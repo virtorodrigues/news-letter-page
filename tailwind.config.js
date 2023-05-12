@@ -14,8 +14,8 @@ module.exports = {
       xl: '1200px',
     },
     colors: {
-      'red-500': '#dd444c',
-
+      'red-500': '#f75a68',
+      
       'pink-500': '#c22665',
       'pink-300': '#E44063',
       
