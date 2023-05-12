@@ -133,21 +133,21 @@ export function NewsLetterForm() {
               className="flex xs:flex-col md:flex-row flex-1 gap-2"
             >
               <RadioGroup.Item
-                id="level-pro"
-                value="level-pro"
-                className="data-[state=checked]:border-pink-300 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
-              >
-                <span className="p-4 text-sm text-left">
-                  🤓 Já sou dev e tenho conhecimento
-                </span>
-              </RadioGroup.Item>
-              <RadioGroup.Item
                 id="level-beginner"
                 value="level-beginner"
                 className="data-[state=checked]:border-pink-300 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
               >
                 <span className="p-4 text-sm text-left w-full h-full">
                   😎 Estou começando em programação
+                </span>
+              </RadioGroup.Item>
+              <RadioGroup.Item
+                id="level-pro"
+                value="level-pro"
+                className="data-[state=checked]:border-pink-300 data-[state=checked]:bg-gray-500 flex flex-1 justify-center rounded-md cursor-pointer border border-gray-500"
+              >
+                <span className="p-4 text-sm text-left w-full h-full">
+                  🤓 Já sou dev e tenho conhecimento
                 </span>
               </RadioGroup.Item>
             </RadioGroup.Root>
