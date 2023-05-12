@@ -105,6 +105,7 @@ export function NewsLetterForm() {
               <Form.Control asChild>
                 <input
                   id="email"
+                  autoCapitalize="none"
                   autoComplete="on"
                   placeholder="Digite seu e-mail"
                   className="first-letter:lowercase placeholder:text-gray-300 outline-none h-14 py-4 w-full bg-gray-500 text-white autofill:transition-colors autofill:duration-[5000s]"
