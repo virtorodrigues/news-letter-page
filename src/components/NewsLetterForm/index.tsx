@@ -8,34 +8,20 @@ import { CheckIcon } from "@radix-ui/react-icons";
 
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { ErrorMessageComponent } from "./ErrorMessageComponent";
+import { NewsLetterFormSchema, NewsLetterType } from "./formSchema";
+
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 export function NewsLetterForm() {
-  const NewsLetterFormSchema = z.object({
-    name: z.string().min(1, { message: "Insira um nome válido" }),
-    email: z.string().email({ message: "Insira um email válido" }),
-    level: z.enum(["level-beginner", "level-pro"], {
-      required_error: "Selecione seu nível em programação",
-      invalid_type_error: "Selecione seu nível em programação",
-    }),
-    useTerms: z
-      .boolean({
-        required_error: "Concorde com os termos e políticas de privacidade",
-        invalid_type_error: "Concorde com os termos e políticas de privacidade",
-      })
-      .refine((val) => val === true, {
-        message: "Concorde com os termos e políticas de privacidade",
-      }),
-  });
-
-  type NewsLetterType = z.infer<typeof NewsLetterFormSchema>;
-
   const {
     register,
     handleSubmit,
     control,
-    watch,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitting },
   } = useForm<NewsLetterType>({
     resolver: zodResolver(NewsLetterFormSchema),
     defaultValues: {
@@ -46,10 +32,23 @@ export function NewsLetterForm() {
     },
   });
 
-  console.log(errors);
+  async function handleSubmitRegisterNewsLetter(data: NewsLetterType) {
+    return new Promise((resolve: any) => {
+      setTimeout(() => {
+        resolve();
+        successRegisterToast();
+        reset();
+      }, 3000);
+    });
+  }
 
-  function handleSubmitRegisterNewsLetter(data: NewsLetterType) {
-    console.log(data);
+  function successRegisterToast() {
+    toast("Você foi inscrito com sucesso!", {
+      bodyClassName: "text-white",
+      bodyStyle: { background: "#07bc0c" },
+      progressStyle: { background: "#FFF0F0" },
+      style: { background: "#07bc0c" },
+    });
   }
 
   return (
@@ -58,6 +57,8 @@ export function NewsLetterForm() {
       className="xs:p-4 md:p-8 md:min-w-[26.75rem]
         rounded-md max-w-sm flex flex-col gap-6 bg-gray-700 h-full"
     >
+      <ToastContainer />
+
       <strong className="text-xl leading-8">Inscreva-se gratuitamente</strong>
       <div className="flex flex-col gap-3">
         <Form.Field className="flex flex-col gap-2 w-full" name="name">
@@ -85,22 +86,7 @@ export function NewsLetterForm() {
             </Form.Control>
           </div>
 
-          <div className="flex items-center gap-2">
-            {errors.name && (
-              <>
-                <Image
-                  src="/error-icon.svg"
-                  alt=""
-                  width={18}
-                  height={20}
-                  priority
-                />
-                <span className="text-red-500 text-sm">
-                  {errors.name?.message}
-                </span>
-              </>
-            )}
-          </div>
+          <ErrorMessageComponent errorValue={errors.name} />
         </Form.Field>
 
         <Form.Field className="flex flex-col gap-2 w-full" name="email ">
@@ -128,22 +114,7 @@ export function NewsLetterForm() {
             </Form.Control>
           </div>
 
-          <div className="flex items-center gap-2">
-            {errors.email && (
-              <>
-                <Image
-                  src="/error-icon.svg"
-                  alt=""
-                  width={18}
-                  height={20}
-                  priority
-                />
-                <span className="text-red-500 text-sm">
-                  {errors.email?.message}
-                </span>
-              </>
-            )}
-          </div>
+          <ErrorMessageComponent errorValue={errors.email} />
         </Form.Field>
       </div>
 
@@ -182,22 +153,8 @@ export function NewsLetterForm() {
             </RadioGroup.Root>
           )}
         />
-        <div className="flex items-center gap-2">
-          {errors.level && (
-            <>
-              <Image
-                src="/error-icon.svg"
-                alt=""
-                width={18}
-                height={20}
-                priority
-              />
-              <span className="text-red-500 text-sm">
-                {errors.level?.message}
-              </span>
-            </>
-          )}
-        </div>
+
+        <ErrorMessageComponent errorValue={errors.level} />
       </div>
 
       <div className="flex flex-col gap-2">
@@ -224,26 +181,15 @@ export function NewsLetterForm() {
             <span className="underline">Políticas de privacidade.</span>
           </label>
         </div>
-        <div className="flex items-center gap-2">
-          {errors.useTerms && (
-            <>
-              <Image
-                src="/error-icon.svg"
-                alt=""
-                width={18}
-                height={20}
-                priority
-              />
-              <span className="text-red-500 text-sm">
-                {errors.useTerms?.message}
-              </span>
-            </>
-          )}
-        </div>
+
+        <ErrorMessageComponent errorValue={errors.useTerms} />
       </div>
 
       <Form.Submit asChild>
-        <button className="bg-pink-300 hover:bg-pink-500 duration-500 p-[0.875rem] rounded-md font-bold">
+        <button
+          disabled={isSubmitting}
+          className="disabled:cursor-not-allowed disabled:opacity-40 bg-pink-300  hover:(not:disabled):bg-pink-500 duration-500 p-[0.875rem] rounded-md font-bold"
+        >
           QUERO RECEBER
         </button>
       </Form.Submit>
