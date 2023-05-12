@@ -2,7 +2,10 @@ import { z } from "zod";
 
 export const NewsLetterFormSchema = z.object({
   name: z.string().min(1, { message: "Insira um nome válido" }),
-  email: z.string().email({ message: "Insira um email válido" }),
+  email: z
+    .string()
+    .min(3, { message: "Insira um email válido" })
+    .email("Insira um email válido"),
   level: z
     .enum(["level-beginner", "level-pro", "unchecked"], {
       required_error: "Selecione seu nível em programação",
