@@ -5,7 +5,8 @@ export const NewsLetterFormSchema = z.object({
   email: z
     .string()
     .min(3, { message: "Insira um email válido" })
-    .email("Insira um email válido"),
+    .email("Insira um email válido")
+    .transform((val) => val.toLowerCase()),
   level: z
     .enum(["level-beginner", "level-pro", "unchecked"], {
       required_error: "Selecione seu nível em programação",

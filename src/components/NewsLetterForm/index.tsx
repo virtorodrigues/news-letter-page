@@ -32,11 +32,10 @@ export function NewsLetterForm() {
     },
   });
 
-  console.log(errors);
-
   async function handleSubmitRegisterNewsLetter(data: NewsLetterType) {
     console.log("dasd");
     return new Promise((resolve: any) => {
+      console.log(data);
       setTimeout(() => {
         resolve();
         successRegisterToast();
@@ -108,7 +107,7 @@ export function NewsLetterForm() {
                   id="email"
                   autoComplete="on"
                   placeholder="Digite seu e-mail"
-                  className="placeholder:text-gray-300 outline-none h-14 py-4 w-full bg-gray-500 text-white autofill:transition-colors autofill:duration-[5000s]"
+                  className="first-letter:lowercase placeholder:text-gray-300 outline-none h-14 py-4 w-full bg-gray-500 text-white autofill:transition-colors autofill:duration-[5000s]"
                   {...register("email")}
                 />
               </Form.Control>
