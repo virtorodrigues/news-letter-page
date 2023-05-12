@@ -61,7 +61,11 @@ export function NewsLetterForm() {
       <strong className="text-xl leading-8">Inscreva-se gratuitamente</strong>
       <div className="flex flex-col gap-3">
         <Form.Field className="flex flex-col gap-2 w-full" name="name">
-          <div className="flex flex-row items-center gap-2 rounded-md px-4 w-full bg-gray-500 text-white">
+          <div
+            className={`${
+              errors.name && "border-red-500 border-2"
+            } flex flex-row items-center gap-2 rounded-md px-4 w-full bg-gray-500 text-white`}
+          >
             <Image
               src="/user-icon.svg"
               alt=""
@@ -100,7 +104,11 @@ export function NewsLetterForm() {
         </Form.Field>
 
         <Form.Field className="flex flex-col gap-2 w-full" name="email ">
-          <div className="flex flex-row items-center gap-2 rounded-md px-4 w-full bg-gray-500 text-white">
+          <div
+            className={`${
+              errors.email && "border-red-500 border-2"
+            } flex flex-row items-center gap-2 rounded-md px-4 w-full bg-gray-500 text-white`}
+          >
             <Image
               src="/message-icon.svg"
               alt=""
