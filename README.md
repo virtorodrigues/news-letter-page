@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ✉️ Newsletter
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/virtorodrigues/news-letter-page/blob/master/LICENCE) 
 
-## Getting Started
+# 👀 Sobre o projeto
 
-First, run the development server:
+No momento em que vi pela primeira vez a página de inscrição para newsletter da Rocketseat, já pénsei: Vou recriar esta página. Então fiz, apenas alterando algumas cores e elementos. </br>
+✅ É apensa uma simulação de inscrição, seus dados não são gravados em nenhum lugar;</br>
+✅ Conta com uma responsividade bem legal;</br>
+✅ Controle do formulário com zod + react-hook-forms;</br>
+
+
+## 🌄 Screenshots
+![image](https://github.com/virtorodrigues/news-letter-page/assets/40903144/bf085d90-2efc-4c78-9829-d8818bcf39b5)
+
+![image](https://github.com/virtorodrigues/news-letter-page/assets/40903144/9973de99-c907-4a51-a1c3-ad08ba46c451)
+
+
+
+# :rocket: Tecnologias utilizadas
+- Front-end
+  - NextJS (^13)
+  - React (^18)
+  - TailwindCSS (estilização dos componentes)
+  - TypeScript
+  - Eslint (formatação do código)
+  - React-toastify (para criar alerta de inscrição realizada com sucesso)
+  - React-hook-forms (controlar formulário)
+  - Zod (validar o formulário)
+
+## 💣 Implantação em produção
+- Front-end
+  - Vercel
+
+
+## 🤩 Deploy
+A aplicação está disponível no endereço https://news-letter-page.vercel.app/
+
+# ⚠️ Como executar o projeto
+
+## Front-end web
+Pré-requisitos: npm / yarn
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+# clonar repositório
+git clone https://github.com/virtorodrigues/news-letter-page
+
+# entrar na pasta do projeto front-end web
+cd news-letter-page
+
+# instalar dependências
+yarn install / npm install
+
+# executar o projeto
+yarn start / npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔥 Features Implementadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [x] Validação completa do formulário com zod + react-hook-forms;
+- [X] Simulação de inscrição na newsletter;
+- [X] Responsividade;
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Autor
 
-## Learn More
+Vitor Santos Rodrigues
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://www.linkedin.com/in/virtorodrigues/
