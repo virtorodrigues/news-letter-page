@@ -1,5 +1,5 @@
 # ✉️ Newsletter
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/virtorodrigues/news-letter-page/blob/master/LICENCE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/virtorodrigues/news-letter-page/blob/master/LICENSE) 
 
 # 👀 Sobre o projeto
 
